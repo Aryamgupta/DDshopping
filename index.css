@@ -293,7 +293,8 @@ background-image: url(https://i2.wp.com/www.randa.net/wp-content/uploads/2020/11
 
 .girls_design{
     height: 50vh;
-    width: 100%px;
+    
+    width: 100%;
     display: flex;
     margin-top: 10vh;
     background-position: center;
@@ -350,28 +351,6 @@ background-image: url(https://i2.wp.com/www.randa.net/wp-content/uploads/2020/11
 
 
 
-
-@media  screen and (max-width:1000px){
- 
-    .girls_design{
-        background-image: none;
-    }
-
-    /* .girls_design_div{
-        width: 50%;
-    } */
-
-    .heading_girls_design{
-        margin-left: 100px;
-        margin-top: 0px;
-    }
-
-    .heading_girls_design:hover{
-        color: black;
-    }
-
-}
-
 @keyframes girls_design
 {
     0%{
@@ -380,18 +359,18 @@ background-image: url(https://i2.wp.com/www.randa.net/wp-content/uploads/2020/11
     }
     25%{
         
-        height: 50vh;
+        height: 100%;
         width: 30%;
     }
 
     50%{
 
-        height: 50vh;
+        height: 100%;
         width: 0%;
     }
 
     75%{
-        height: 50vh;
+        height: 100%;
         width: 30%;
     }
 
@@ -401,6 +380,70 @@ background-image: url(https://i2.wp.com/www.randa.net/wp-content/uploads/2020/11
     }
     
 }
+
+
+
+
+@media  screen and (max-width:1000px){
+ 
+    .girls_design{
+        background-image: url(https://images-na.ssl-images-amazon.com/images/G/31/img19/Fashion/WA19/DressStore_Sobe/Double-hero-Budget-Buys._CB439267845_.jpg);
+        max-height: 400px;
+        background-size: cover;
+       
+
+    }
+
+    /* .girls_design_div{
+        width: 50%;
+    } */
+
+    .heading_girls_design{
+       display: none;
+    }
+
+    .heading_girls_design:hover{
+        color: black;
+    }
+
+    .girls_design_div{
+        animation: girls_design 15s infinite alternate-reverse;
+        animation-play-state: running;
+    }
+
+    @keyframes girls_design
+{
+    0%{
+       height: 0vh;
+        width: 50%;
+    }
+    25%{
+        
+        height: 100%;
+        width: 50%;
+    }
+
+    50%{
+
+        height: 100%;
+        width: 0%;
+    }
+
+    75%{
+        height: 100%;
+        width: 50%;
+    }
+
+    100%{height: 0vh;
+        width: 50%;
+
+    }
+    
+}
+
+}
+
+
 
 
 
@@ -454,7 +497,7 @@ background-image: url(https://i2.wp.com/www.randa.net/wp-content/uploads/2020/11
 .f_two{
 height: 60vh;
 width: 60%;
-max-height: 400px;
+/* max-height: 400px; */
 background-image: url(https://i.insider.com/5dd2d2f27eece55b137c4a2c?width=700);
 /* background-color: burlywood; */
 display: flex;
@@ -651,7 +694,7 @@ flex-wrap: wrap;
 @media screen and (max-width:1000px) {
 
     .famous{
-        height: fit-content;
+        height: auto;
         width: 100%;
         padding-top: 60px;
         padding-bottom: 20px;
@@ -662,6 +705,7 @@ flex-wrap: wrap;
         align-content: center;
         margin-top: 120px;
         animation: famous 10s 10 alternate-reverse;
+        overflow: hidden;
     }
     
 
@@ -673,18 +717,42 @@ flex-wrap: wrap;
         margin: auto;
         margin-top: 50px;
         margin-bottom: 50px;
-        animation: f_one 10s  5 alternate-reverse paused;
+        animation: f_one 10s  5 reverse paused;
     }
 
     .f_two{
-        height: 60vh;
-        width: 100%;
+        height: 700px;
+        width:200%;
+        margin-left: -50%;
         background-image: url(https://i.insider.com/5dd2d2f27eece55b137c4a2c?width=700);
         /* background-color: burlywood; */
         display: flex;
-        animation: f_two 10s  alternate-reverse 5 paused;
+        animation: f_media 10s  alternate-reverse 5 running;
         flex-wrap: wrap;
+        
         }
+    
+        @keyframes  f_media {
+            
+            0%{
+                margin-left: -50%;
+            }
+
+            25%{
+                margin-left: 0%;
+            }
+
+            75%{
+                margin-left: -100%;
+            }
+
+            100%{
+                margin-left: -50%;
+            }
+
+
+        }
+    
 
 
 }
@@ -906,6 +974,15 @@ flex-wrap: wrap;
 
 .d1{
     font-size: 16px;
+}
+
+@media screen and (max-width:1000px) {
+    .sell_0{
+        min-width: 350px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }
 
 
