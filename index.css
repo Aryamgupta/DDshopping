@@ -521,6 +521,14 @@ display: flex;
     cursor: pointer;
     transition: .4s;
 }
+    
+.sub{
+    font-size:25px:
+    }
+    
+ .sub_item{
+     font-size:20px:
+    }
 
 .cu{
     align-items: flex-start;
